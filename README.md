@@ -26,7 +26,7 @@ AgentSkills/
 | 스킬팩 | 설명 | 스킬 목록 |
 |--------|------|----------|
 | superpowers | obra/superpowers 기반 개발 워크플로우 | brainstorming, requesting-code-review, test-driven-development, using-superpowers, verification-before-completion, writing-plans |
-
+| frontend-skill | openai/skills 기반 프리미엄 UI 설계 가이드 | frontend-skill |
 ## 빠른 시작
 
 ```bash
