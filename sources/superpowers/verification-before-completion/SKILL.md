@@ -1,17 +1,17 @@
 ---
 name: verification-before-completion
-description: 작업이 완료/수정/통과되었다고 주장하기 직전에 사용합니다. 커밋/PR 생성 전 반드시 검증 명령을 실행하고 출력으로 확인한 뒤에만 성공 주장을 허용합니다. 항상 주장보다 증거가 우선입니다.
+description: Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always
 ---
 
 # Verification Before Completion
 
 ## Overview
 
-검증 없이 완료를 주장하는 것은 효율이 아니라 부정직입니다.
+Claiming work is complete without verification is dishonesty, not efficiency.
 
-**핵심 원칙:** 항상 주장보다 증거가 먼저입니다.
+**Core principle:** Evidence before claims, always.
 
-**이 규칙의 문구만 피해서 우회하는 것도 규칙 위반입니다.**
+**Violating the letter of this rule is violating the spirit of this rule.**
 
 ## The Iron Law
 
@@ -19,22 +19,22 @@ description: 작업이 완료/수정/통과되었다고 주장하기 직전에 �
 NO COMPLETION CLAIMS WITHOUT FRESH VERIFICATION EVIDENCE
 ```
 
-현재 메시지에서 검증 명령을 실제 실행하지 않았다면, 통과했다고 주장할 수 없습니다.
+If you haven't run the verification command in this message, you cannot claim it passes.
 
 ## The Gate Function
 
 ```
-어떤 상태 주장이나 만족 표현을 하기 전에:
+BEFORE claiming any status or expressing satisfaction:
 
-1. IDENTIFY: 이 주장을 입증하는 명령이 무엇인지 식별
-2. RUN: 전체 명령을 새로/완전하게 실행
-3. READ: 전체 출력 확인, exit code 확인, 실패 개수 확인
-4. VERIFY: 출력이 주장 내용을 입증하는지 확인
-   - NO: 증거와 함께 실제 상태 보고
-   - YES: 증거와 함께 주장 보고
-5. ONLY THEN: 주장 표현
+1. IDENTIFY: What command proves this claim?
+2. RUN: Execute the FULL command (fresh, complete)
+3. READ: Full output, check exit code, count failures
+4. VERIFY: Does output confirm the claim?
+   - If NO: State actual status with evidence
+   - If YES: State claim WITH evidence
+5. ONLY THEN: Make the claim
 
-한 단계라도 건너뛰면 = 검증이 아니라 허위 주장
+Skip any step = lying, not verifying
 ```
 
 ## Common Failures
@@ -51,14 +51,14 @@ NO COMPLETION CLAIMS WITHOUT FRESH VERIFICATION EVIDENCE
 
 ## Red Flags - STOP
 
-- "should", "probably", "seems to" 같은 추정 표현 사용
-- 검증 전 만족 표현("Great!", "Perfect!", "Done!" 등)
-- 검증 없이 커밋/푸시/PR 진행
-- 에이전트 성공 보고를 그대로 신뢰
-- 부분 검증에 의존
-- "이번 한 번만" 사고
-- 피로를 이유로 종료하려는 상태
-- **검증 없이 성공을 암시하는 모든 표현**
+- Using "should", "probably", "seems to"
+- Expressing satisfaction before verification ("Great!", "Perfect!", "Done!", etc.)
+- About to commit/push/PR without verification
+- Trusting agent success reports
+- Relying on partial verification
+- Thinking "just this once"
+- Tired and wanting work over
+- **ANY wording implying success without having run verification**
 
 ## Rationalization Prevention
 
@@ -107,33 +107,33 @@ NO COMPLETION CLAIMS WITHOUT FRESH VERIFICATION EVIDENCE
 
 ## Why This Matters
 
-24개의 실패 메모리에서 반복된 결과:
-- 파트너가 "믿기 어렵다"고 반응 -> 신뢰 훼손
-- 정의되지 않은 함수 배포 -> 런타임 장애
-- 요구사항 누락 배포 -> 불완전 기능 전달
-- 가짜 완료로 시간 낭비 -> 재지시 -> 재작업
-- "정직은 핵심 가치" 원칙 위반
+From 24 failure memories:
+- your human partner said "I don't believe you" - trust broken
+- Undefined functions shipped - would crash
+- Missing requirements shipped - incomplete features
+- Time wasted on false completion → redirect → rework
+- Violates: "Honesty is a core value. If you lie, you'll be replaced."
 
 ## When To Apply
 
-**항상 적용(다음 이전):**
-- 모든 성공/완료 주장
-- 모든 만족 표현
-- 작업 상태에 대한 긍정 표현
-- 커밋, PR 생성, 태스크 완료
-- 다음 태스크 이동
-- 에이전트 위임
+**ALWAYS before:**
+- ANY variation of success/completion claims
+- ANY expression of satisfaction
+- ANY positive statement about work state
+- Committing, PR creation, task completion
+- Moving to next task
+- Delegating to agents
 
-**규칙 적용 범위:**
-- 정확히 같은 문구
-- 바꿔 말한 문구/동의어
-- 성공을 암시하는 표현
-- 완료/정확성을 암시하는 모든 커뮤니케이션
+**Rule applies to:**
+- Exact phrases
+- Paraphrases and synonyms
+- Implications of success
+- ANY communication suggesting completion/correctness
 
 ## The Bottom Line
 
-**검증에는 지름길이 없습니다.**
+**No shortcuts for verification.**
 
-명령을 실행하고, 출력을 읽고, 그 다음 결과를 주장하십시오.
+Run the command. Read the output. THEN claim the result.
 
-협상 불가 규칙입니다.
+This is non-negotiable.
